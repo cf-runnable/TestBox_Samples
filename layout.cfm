@@ -92,7 +92,7 @@
 				<a href="##"><i class="icon-arrow-up"></i> Back to top</a>
 			</p>
 			<p>
-				This demo running on <strong></strong>.<br>
+				This demo running on <strong>TestBox 1.1 Beta</strong>.<br>
 				Code available at <a href="https://github.com/cf-runnable/TestBox_Samples" target="_top">https://github.com/cf-runnable/TestBox_Samples</a><br>
 				Download Testbox here: <a href="http://www.coldbox.org/download" target="_top">http://www.coldbox.org/download</a><br>
 				TestBox Docs: <a href="http://wiki.coldbox.org/wiki/TestBox.cfm" target="_top">http://wiki.coldbox.org/wiki/TestBox.cfm</a><br><br>
