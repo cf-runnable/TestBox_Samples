@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="TestBox v#testbox.getVersion()#">
 	<title>Pass: #results.getTotalPass()# Fail: #results.getTotalFail()# Errors: #results.getTotalError()#</title>
-	<style><cfinclude template="/testbox/system/testing/reports/assets/css/simple.css"></style>
+	<style><cfinclude template="/coldbox/system/testing/reports/assets/css/simple.css"></style>
 	<style>
 	.dots{ font-size: 60px; clear: both; margin-bottom: 20px; }
 	.dots span{ float: left; margin: -6px;}
 	</style>
-	<script><cfinclude template="/testbox/system/testing/reports/assets/js/jquery.js"></script>
+	<script><cfinclude template="/coldbox/system/testing/reports/assets/js/jquery.js"></script>
 	<script>
 	function showInfo( failMessage, specID, isError ){
 		if( failMessage.length ){

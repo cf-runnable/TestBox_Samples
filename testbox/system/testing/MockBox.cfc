@@ -16,7 +16,7 @@ Description		:
 	<cffunction name="init" access="public" output="false" returntype="MockBox" hint="Create an instance of MockBox">
 		<cfargument name="generationPath" type="string" required="false" default="" hint="The mocking generation relative path.  If not defined, then the factory will use its internal tmp path. Just make sure that this folder is accessible from an include."/>
 		<cfscript>
-			var tempDir =  "/testbox/system/testing/stubs";
+			var tempDir =  "/coldbox/system/testing/stubs";
 			
 			instance = structnew();
 			
@@ -34,7 +34,7 @@ Description		:
 				instance.generationPath = instance.generationPath & "/";
 			}
 			
-			instance.version 		= "2.2.0.00062";
+			instance.version 		= "2.2.0.@build.number@";
 			instance.mockGenerator 	= createObject("component","testbox.system.testing.mockutils.MockGenerator").init( this, true );
 			
 			return this;

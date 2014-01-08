@@ -33,6 +33,13 @@ component{
 	/************************************** BDD & EXPECTATIONS METHODS *********************************************/
 	
 	/**
+	* Constructor
+	*/ 
+	remote function init(){
+		return this;
+	}
+
+	/**
 	* Expect an exception from the testing spec
 	* @type.hint The type to expect
 	* @regex.hint Optional exception message regular expression to match, by default it matches .*
@@ -579,10 +586,10 @@ component{
 	*/
 	any function makePublic( required any target, required string method, string newName="" ){
 		
-		// mix it
-		arguments.target.$exposeMixin = this.$utility.getMixerUtil().exposeMixin;
+		// decorate it
+		this.$utility.getMixerUtil().start( arguments.target );
 		// expose it
-		arguments.target.$exposeMixin( arguments.method, arguments.newName );
+		arguments.target.exposeMixin( arguments.method, arguments.newName );
 
 		return arguments.target;
 	}
@@ -664,12 +671,10 @@ component{
 	// Closure Stub
 	function closureStub(){}
 
-	/************************************** PRIVATE METHODS *********************************************/
-
 	/**
 	* Check if the incoming exception is expected or not.
 	*/
-	private boolean function isExpectedException( required exception, required specName, required runner ){
+	boolean function isExpectedException( required exception, required specName, required runner ){
 		var results = false;
 		// do we have an expected annotation?
 		var eAnnotation = arguments.runner.getMethodAnnotation( this[ arguments.specName ], this.$exceptionAnnotation, "false" );
